@@ -3,14 +3,14 @@
 
 ## Overview
 
-This project implements a complete LangChain pipeline that ingests a research document (PDF, Word, or plain text), extracts meaningful facts, generates natural question-answer pairs, augments them for paraphrase robustness, and builds a semantic retrieval backend so that a chatbot can answer user queries even when they are paraphrased or reworded. It is designed to run end-to-end in Google Colab but can be adapted for production/chatbot backends.
+This project implements a complete LangChain pipeline that leverages pre-trained models from Hugging Face. It ingests a research document (PDF, Word, or plain text), extracts meaningful facts, generates natural question-answer pairs, augments them for paraphrase robustness, and builds a semantic retrieval backend so that a chatbot can answer user queries even when they are paraphrased or reworded. It is designed to run end-to-end in Google Colab but can be adapted for production/chatbot backends.
 
 ### Key Capabilities
 - Document normalization and cleaning (headers/footers removal, hyphenation fixing, quote normalization)
 - Sentence-level decomposition
 - Hybrid fact extraction and question generation
 - Paraphrase augmentation for question diversity
-- Semantic embedding of questions
+- Semantic embedding of questions using models from HuggingFace
 - Fast retrieval (FAISS) with cross-encoder reranking for precision
 - Interactive querying demonstrating robustness to paraphrased user questions
 - Orchestration of the entire RAG pipeline using the LangChain framework, connecting document loaders, text splitters, embedding models, and vector stores into a seamless workflow.
